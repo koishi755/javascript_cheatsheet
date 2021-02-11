@@ -63,6 +63,11 @@ function change_html(){
     document.getElementById("change").textContent="変化した？"
 }
 
+// htmlのdata属性を取得
+let data = document.getElementById("data");
+let test_data = data.dataset.test;
+console.log(`取得したdataは${test_data}です`);
+
 // オブジェクトのアクセスの仕方とか。中に関数も作れる
 let obj = {
     name:"こいし", 
@@ -79,6 +84,33 @@ let obj = {
 
 // オブジェクト内のメソッド実行
 obj.print_console(obj);
+
+
+// よく分からないけどコピー
+function copyOverrideOnce(s){
+    document.addEventListener('copy', function(e){
+      e.clipboardData.setData('text/plain', s);
+      e.preventDefault();
+    },
+    {once:true}
+    );
+}
+function copy(i){
+    var pre ="pre" + i;
+    var text = document.getElementById(pre).textContent;
+    copyOverrideOnce(text);
+    document.execCommand("copy");
+}
+
+// ファイルをDLする
+function dl() {
+    var html = "ダウンロードするファイルのテキスト";
+    let blob = new Blob([html], { type: "text/plan" });
+    let link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "作ったファイル.html";
+    link.click();
+}
 
 // --------------------------------------------------------
 

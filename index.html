@@ -15,6 +15,16 @@
       <input type="button" value="要素追加" onclick="add()"/>
       <div id="obj"></div>
       <input type="button" value="obj追加" onclick="obj.add_obj()"/>
+      <div id="data" data-test="test">getdata</div>
+      
+      <div class="item" id="item0" data-count=0><input type="button" value="copy" data-count="0" onclick="copy(0);">
+        <div class="code" style=".code {width: 500px; overflow-x: scroll; white-space: nowrap; border: blue 0.5px solid;}">
+          <pre name="pre" id="pre0" data-pre="0" >メッセージを入力</pre>
+        </div>
+      </div>
+
+      <input type="button" title="test" value="ファイルダウンロード" onClick="dl()" />
+
     </article>
 
     <script src="jquery-3.5.1.min.js"></script>
