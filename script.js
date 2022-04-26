@@ -63,6 +63,10 @@ function change_html(){
     document.getElementById("change").textContent="変化した？"
 }
 
+function change_value(){
+    document.getElementById("change").textContent="変化した？"
+}
+
 // htmlのdata属性を取得
 let data = document.getElementById("data");
 let test_data = data.dataset.test;
