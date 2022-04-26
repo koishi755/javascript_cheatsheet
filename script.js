@@ -63,8 +63,10 @@ function change_html(){
     document.getElementById("change").textContent="変化した？"
 }
 
+// テキストボックス変更
 function change_value(){
-    document.getElementById("change").textContent="変化した？"
+    text_data = document.getElementById("textboxid")
+    text_data.value = "どうですか？"
 }
 
 // htmlのdata属性を取得
