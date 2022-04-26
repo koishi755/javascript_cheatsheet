@@ -65,7 +65,7 @@ function change_html(){
 
 // テキストボックス変更
 function change_value(){
-    text_data = document.getElementById("textboxid");
+    let text_data = document.getElementById("textboxid");
     text_data.value = "どうですか？";
 }
 
